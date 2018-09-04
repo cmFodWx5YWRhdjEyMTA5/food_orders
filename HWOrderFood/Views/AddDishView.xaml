@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HWOrderFood.Views.AddDishView" xmlns:local="clr-namespace:HWOrderFood.Views;assembly=HWOrderFood.Views">
+    <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+        <StackLayout Orientation="Horizontal">
+            <StackLayout Margin="0, 18" VerticalOptions="StartAndExpand">
+                <Button Image="nav_close" Command="{Binding NavigateDishCommand}" BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
+                </Button>
+            </StackLayout>
+            <StackLayout Margin="0, 30" VerticalOptions="StartAndExpand">
+                <Label Text="Добавление блюда" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" />
+            </StackLayout>
+        </StackLayout>
+        <StackLayout>
+            <Entry Margin="5,10" Text="{Binding DishName}" Placeholder="Введите название блюда" />
+        </StackLayout>
+        <StackLayout>
+            <!--<StackLayout.GestureRecognizers>
+                       <TapGestureRecognizer Command="{Binding CreateSelectCommand}"/>  
+                </StackLayout.GestureRecognizers>-->
+            <Label Margin="10, 10" Text="Выберите категорию" />
+            <Picker SelectedItem="{Binding CategoryType}">
+                <Picker.Items>
+                    <x:String>Гарнир</x:String>
+                    <x:String>Мясное</x:String>
+                    <x:String>Салат</x:String>
+                    <x:String>Хлеб</x:String>
+                </Picker.Items>
+            </Picker>
+        </StackLayout>
+        <Button Text="ДОБАВИТЬ" Command="{Binding SaveDishCommand}" BorderWidth="2" BorderColor="Green" TextColor="Black" Margin="20, 10" />
+        
+    </StackLayout>
+</local:BaseContentPage>

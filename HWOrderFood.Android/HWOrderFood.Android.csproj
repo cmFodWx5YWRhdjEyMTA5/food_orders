@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7AE696AD-2535-473C-AE06-18824CB858FA}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>HWOrderFood.Droid</RootNamespace>
+    <AssemblyName>HWOrderFood.Android</AssemblyName>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.446417" />
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.v4" Version="27.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="27.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2" />
+    <PackageReference Include="Prism.Unity.Forms">
+      <Version>7.0.0.396</Version>
+    </PackageReference>
+    <PackageReference Include="Prism.Forms">
+      <Version>7.0.0.396</Version>
+    </PackageReference>
+    <PackageReference Include="Prism.Core">
+      <Version>7.0.0.396</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms.CarouselView">
+      <Version>2.3.0-pre2</Version>
+    </PackageReference>
+    <PackageReference Include="Acr.UserDialogs">
+      <Version>7.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>11.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="akavache.sqlite3">
+      <Version>5.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="DynamicStackLayout">
+      <Version>2017.12.4</Version>
+    </PackageReference>
+    <PackageReference Include="NControl">
+      <Version>0.9.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Tabbar.axml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon_round.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\add.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\big_create_menu.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\big_order_dishes.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\big_order_list.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\bread.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\calendar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\delete.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\done.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\edit.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\inform.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\less.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\meat.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\more.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\nav_close.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\naw_menu.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\salad.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\side_dish.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\add.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\big_create_menu.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\big_order_dishes.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\big_order_list.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\bread.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\calendar.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\delete.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\done.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\edit.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\inform.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\less.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\meat.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\more.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\nav_close.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\naw_menu.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\salad.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\side_dish.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\add.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\big_create_menu.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\big_order_dishes.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\big_order_list.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\bread.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\calendar.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\delete.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\done.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\edit.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\inform.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\less.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\meat.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\more.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\nav_close.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\naw_menu.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\salad.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\side_dish.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\add.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\big_create_menu.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\big_order_dishes.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\big_order_list.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\bread.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\calendar.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\delete.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\done.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\edit.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\inform.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\less.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\meat.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\more.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\nav_close.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\naw_menu.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\salad.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\side_dish.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\checkbox_off.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\checkbox_on.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\checkbox_off.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\checkbox_on.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\checkbox_off.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\checkbox_on.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\checkbox_off.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\checkbox_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
+    <Folder Include="Resources\drawable-xxxhdpi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HWOrderFood\HWOrderFood.csproj">
+      <Project>{23CE4731-0677-4877-82F1-50269BD7A13B}</Project>
+      <Name>HWOrderFood</Name>
+    </ProjectReference>
+  </ItemGroup>
+ <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>

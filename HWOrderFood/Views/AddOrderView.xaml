@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HWOrderFood.Views.AddOrderView" xmlns:local="clr-namespace:HWOrderFood.Views;assembly=HWOrderFood.Views" xmlns:controls="clr-namespace:HWOrderFood.Controls;assembly=HWOrderFood">
+    <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" BackgroundColor="#f8f8f8">
+        <StackLayout Orientation="Horizontal">
+                <Button Image="naw_menu.png" Command="{Binding NavigateMenuCommand}" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+                <Label Text="Заказ блюд" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout>
+                    <Frame Margin="10, 10">
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Дата" TextColor="Silver" />
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                                <Image Margin="0,5" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Source="calendar" />
+                                <DatePicker IsEnabled="false" Date="{Binding Date}" Format="dd.MM.yyyy" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" />
+                            </StackLayout>
+                            <Entry Placeholder="Введите свое имя" />
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+                <controls:PortionControl ItemsSource="{Binding PortionModels}" HorizontalOptions="FillAndExpand">
+                </controls:PortionControl>
+                <Button Text="Добавить порцию" Command="{Binding AddPortionCommand}" Margin="10" BorderColor="#49d5a0" BorderWidth="2" />
+                <Frame Margin="10">
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Ваш заказ:" FontSize="Large" />
+                        <controls:PortionInfoControl ItemsSource="{Binding PortionModels}" HorizontalOptions="FillAndExpand">
+                        </controls:PortionInfoControl>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Итого:" FontAttributes="Bold" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <Label Text="{Binding TotalPriceStr}" FontAttributes="Bold" TextColor="#47cfa5" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"/> 
+                            </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</local:BaseContentPage>

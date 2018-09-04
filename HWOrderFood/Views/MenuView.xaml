@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:BaseContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HWOrderFood.Views.MenuView"
+    xmlns:local="clr-namespace:HWOrderFood.Views;assembly=HWOrderFood.Views">
+       <StackLayout VerticalOptions="Fill">  
+           <Button Text="ЗАКАЗ БЛЮД" 
+                    BackgroundColor="Transparent"
+                    FontSize="Medium"
+                    TextColor="Black"
+                    Command="{Binding NavigateCreateOrderCommand}"
+                    HorizontalOptions="Center" 
+                    VerticalOptions="EndAndExpand" />
+            <Button Text="СПИСОК ЗАКАЗОВ"
+                    BackgroundColor="Transparent"
+                    FontSize="Medium"
+                    TextColor="Black"
+                    Margin="0,30"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+            <Button Text="ГЕНЕРАЦИЯ МЕНЮ"
+                    BackgroundColor="Transparent"
+                    TextColor="Black"
+                    FontSize="Medium"
+                    Command="{Binding NavigateDishCommand}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="StartAndExpand"/>
+         </StackLayout>
+</local:BaseContentPage>

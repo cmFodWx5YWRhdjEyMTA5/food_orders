@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HWOrderFood.Views.DishView" xmlns:local="clr-namespace:HWOrderFood.Views;assembly=HWOrderFood.Views" xmlns:controls="clr-namespace:HWOrderFood.Controls;assembly=HWOrderFood">
+    <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" BackgroundColor="#f8f8f8">
+        <StackLayout Orientation="Horizontal">
+            <Button Image="naw_menu.png" Command="{Binding NavigateMenuCommand}" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+            <Label Text="Генерация меню" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Frame Margin="10, 10">
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Дата" TextColor="Silver" />
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                            <Image Margin="0,5" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Source="calendar" />
+                            <DatePicker Date="{Binding Date}" Format="dd.MM.yyyy" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <Button Text="ДОБАВИТЬ БЛЮДО" Command="{Binding NavigateAddDishCommand}" BorderWidth="2" BorderColor="Green" TextColor="Black" Margin="20, 10" />
+                <Frame Margin="10, 10">
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                            <Image HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" Source="side_dish" />
+                            <Label Text="Гарнир" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" />
+                        </StackLayout>
+                        <controls:DynamicStackLayout ItemsSource="{Binding GarnishDishList}" HorizontalOptions="Fill">
+                        </controls:DynamicStackLayout>
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="10, 10">
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                            <Image HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" Source="meat" />
+                            <Label Text="Мясное" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" />
+                        </StackLayout>
+                        <controls:DynamicStackLayout ItemsSource="{Binding MeatDishList}" HorizontalOptions="Fill">
+                        </controls:DynamicStackLayout>
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="10, 10">
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                            <Image HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" Source="salad" />
+                            <Label Text="Салат" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" />
+                        </StackLayout>
+                        <controls:DynamicStackLayout ItemsSource="{Binding SaladDishList}" HorizontalOptions="Fill">
+                        </controls:DynamicStackLayout>
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="10, 10">
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                            <Image HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" Source="bread" />
+                            <Label Text="Хлеб" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" />
+                        </StackLayout>
+                        <controls:DynamicStackLayout ItemsSource="{Binding BreadDishList}" HorizontalOptions="Fill">
+                        </controls:DynamicStackLayout>
+                    </StackLayout>
+                </Frame>
+                <Button Text="ОБНОВИТЬ МЕНЮ" Command="{Binding SaveMenuCommad}" BorderWidth="2" BorderColor="Green" TextColor="White" Margin="20, 10" />
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</local:BaseContentPage>
